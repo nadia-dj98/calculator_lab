@@ -112,12 +112,82 @@ describe('divide', () => {
 
 describe('modulus', () => {
 
+  test('can divide with no remainder result', () => {
+    expected = 0;
+    actual = modulus(24, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide with posiitve remainder result', () => {
+    expected = 1;
+    actual = modulus(1, -2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide with negative remainder result', () => {
+    expected = -3;
+    actual = modulus(-13, 5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide with negative zero as result', () => {
+    expected = -0;
+    actual = modulus(-4, 2);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('even', () => {
+    test(' even positive number', () => {
+      expected = true;
+      actual = even(50);
+      expect(actual).toBe(expected);
+    });
 
+    test(' odd positive number', () => {
+      expected = false;
+      actual = even(55);
+      expect(actual).toBe(expected);
+    });
+
+    test(' even negative number', () => {
+      expected = true;
+      actual = even(-50);
+      expect(actual).toBe(expected);
+    });
+    
+    test(' odd negative number', () => {
+      expected = false;
+      actual = even(-55);
+      expect(actual).toBe(expected);
+    });
 });
 
 describe('odd', () => {
+  test(' odd positive number', () => {
+    expected = true;
+    actual = odd(55);
+    expect(actual).toBe(expected);
+  });
+
+  test('even positive number', () => {
+    expected = false;
+    actual = odd(44);
+    expect(actual).toBe(expected);
+  });
+
+  test(' odd negative number', () => {
+    expected = true;
+    actual = odd(-57);
+    expect(actual).toBe(expected);
+  });
+  
+  test(' even negative number', () => {
+    expected = false;
+    actual = odd(-44);
+    expect(actual).toBe(expected);
+
+  });
 
 });
