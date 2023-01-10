@@ -37,11 +37,34 @@ describe('sum', () => {
 });
 
 describe('subtract', () => {
+  test('can subtract two small positive numbers', () => {
+    expected = 50;
+    actual = subtract(150, 100);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract one postive and one negative number', () => {
+    expected = 110;
+    actual = subtract(100, -10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract two negative numbers', () => {
+    expected = -90;
+    actual = subtract(-100, -10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract zero', () => {
+    expected = 100;
+    actual = subtract(100, 0);
+    expect(actual).toBe(expected);
+  });
 
 });
 
 describe('multiply', () => {
-
+  
 });
 
 describe('divide', () => {
