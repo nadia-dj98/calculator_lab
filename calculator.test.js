@@ -64,10 +64,49 @@ describe('subtract', () => {
 });
 
 describe('multiply', () => {
-  
+   test('can multiply two  positive numbers', () => {
+    expected = 50;
+    actual = multiply(25, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply one postive and one negative number', () => {
+    expected = -40;
+    actual = multiply(8, -5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply two negative numbers', () => {
+    expected = 64;
+    actual = multiply(-8, -8);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply zero', () => {
+    expected = 0;
+    actual = multiply(100, 0);
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('divide', () => {
+  test('can divide two  positive numbers', () => {
+    expected = 25;
+    actual = divide(50, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide one postive and one negative number', () => {
+    expected = -4;
+    actual = divide(8, -2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide two negative numbers', () => {
+    expected = 1;
+    actual = divide(-8, -8);
+    expect(actual).toBe(expected);
+  });
 
 });
 
