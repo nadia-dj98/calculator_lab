@@ -2,7 +2,10 @@ const sum = function(a, b){
     return a + b;
 };
 
-const subtract = null;
+
+const subtract = function(a,b){
+    return a - b;
+};
 
 const multiply = null;
 
