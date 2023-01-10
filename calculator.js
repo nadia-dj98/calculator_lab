@@ -15,12 +15,28 @@ const divide = function(a,b) {
     return a / b;
 };
 
-const modulus = null;
+const modulus = function(a,b) {
+    return a % b;
+};
 
-const even = null;
+const even = function (a) {
+    if (a % 2 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
 
-const odd = null;
-
+const odd = function (a) {
+    if (a % 2 !== 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+ 
 module.exports = { 
     sum, 
     subtract, 
